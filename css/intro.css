@@ -1,0 +1,45 @@
+.hero {
+  background: url(yale.jpg) no-repeat;
+  background-size: cover;
+  background-position: top left;
+  height: calc(100vh - 80px);
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 919px) {
+
+  .hero {
+    height: calc(100vh);
+  }
+}
+
+
+.firstb{
+  background: transparent;
+  font-family: didot;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.firstb a{
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 2px white;
+  padding: 6px;
+  margin: 2px;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+@media (max-width: 580px){
+
+.firstb a{
+  font-size: 20px;
+  }
+}
