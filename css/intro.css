@@ -1,9 +1,10 @@
 .hero {
-  background: url(yale.jpg) no-repeat;
+  background: url("seat.jpg") no-repeat;
   background-size: cover;
-  background-position: top left;
+  background-position: center;
   height: calc(100vh - 80px);
   position: relative;
+  box-sizing: border-box;
   z-index: 0;
 }
 
@@ -17,7 +18,7 @@
 
 .firstb{
   background: transparent;
-  font-family: didot;
+  font-family: bodoni;
   text-align: center;
   width: 100%;
   position: absolute;
@@ -28,7 +29,7 @@
 }
 
 .firstb a{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   border: solid 2px white;
   padding: 6px;
   margin: 2px;
