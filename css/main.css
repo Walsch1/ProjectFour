@@ -18,10 +18,14 @@ body {
   box-sizing: border-box;
 }
 
+
+
 nav{
   background: #E80F0F;
   height: 80px;
   width: 100%;
+  top: 0;
+  position: fixed;
   z-index: 1;
 }
 
@@ -36,6 +40,7 @@ label.logo{
   font-variant: small-caps;
   font-weight: bold;
 }
+
 
 nav ul{
   float: right;
@@ -80,7 +85,7 @@ a.active,a:hover{
   display: none;
 }
 
-@media (max-width: 1017px){
+@media (max-width: 1500px){
   label.logo{
     font-size: 40px;
     padding-left: 40px;
@@ -100,6 +105,7 @@ a.active,a:hover{
     top: 0;
     left:0;
     z-index: 1;
+    text-decoration: none;
   }
 
   nav ul{
@@ -129,4 +135,26 @@ a.active,a:hover{
   nav #check:checked ~ ul{
     left: 0;
   }
+}
+@media (max-width: 446px){
+  nav{
+    font-size: 20px;
+
+
+  }
+  label.logo{
+  font-size: 25px;
+  line-height: 80px;
+
+  }
+  #me{
+    font-size: 20px;
+  }
+  #me h1{
+    font-size: 25px;
+  }
+}
+
+.wrapper-gallery{
+  margin: 0 5vw 5vw 5vw;
 }

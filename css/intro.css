@@ -2,10 +2,11 @@
   background: url("seat.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 10px);
   position: relative;
   box-sizing: border-box;
   z-index: 0;
+
 }
 
 @media (max-width: 919px) {
