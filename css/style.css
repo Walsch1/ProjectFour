@@ -1,0 +1,379 @@
+#aboutme img{
+  box-sizing: border-box;
+  height: calc(100vh - 80px);
+  position: relative;
+  position: left;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+
+}
+
+.middle{
+  position: absolute;
+
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+.btn{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #C50D0D;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+#dif.btn{
+  color:#000000;
+}
+
+.btn i{
+  line-height: 60px;
+  font-size: 30px;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: white;
+  cursor: pointer;
+}
+
+#dif.btn:hover i{
+  color: #C50D0D;
+}
+
+#dif.btn::before{
+  background: #000000;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #C50D0D;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+  cursor: pointer;
+}
+
+
+
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+  cursor: pointer;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+
+
+
+
+
+.aboutme{
+
+  font-variant: small-caps;
+  box-sizing: border-box;
+  margin: 0 3vw 0 3vw;
+  color: white;
+  font-size: 25px;
+}
+
+.aboutme h1{
+  font-family: bodoni;
+  margin-top: 45px;
+  font-size: 45px;
+  color: #E80F0F;
+}
+
+.aboutme p{
+  font-size: 18px;
+  font-variant: normal;
+}
+
+
+#artist{
+  font-size: 45px;
+text-align: center;
+}
+
+#artist h1{
+  padding-top: 10px;
+  grid-area: artisth1;
+}
+#artist p{
+  padding-bottom: 15px;
+  text-align: left;
+  grid-area: artistp;
+}
+
+#blessed h1{
+  font-family: bodoni;
+  margin-top: 45px;
+  font-size: 45px;
+  color: #E80F0F;
+  grid-area: blessedh1;
+}
+
+
+
+
+
+
+
+
+
+#index-gallery {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  grid-template-areas:
+
+  "img9 img10 img11"
+  "img12 img13 img14"
+  ;
+}
+
+#index-gallery .gallery-img{
+  width: 100%;
+  height: 300px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Images */
+
+
+#index-gallery .img9{
+ grid-area: img9;
+ background-image: url("../photos/thumbs/img9.jpg");
+}
+
+#index-gallery .img10{
+ grid-area: img10;
+ background-image: url("../photos/thumbs/img10.jpg");
+}
+
+#index-gallery .img11{
+ grid-area: img11;
+ background-image: url("../photos/thumbs/img11.jpg");
+
+}
+
+
+
+/* gallery image titles*/
+
+.gallery-img div{
+ width: 100%;
+ height: 100%;
+ background-color: black;
+ opacity: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.gallery-img a{
+ font-size: 18px;
+ color: white;
+ text-decoration: none;
+ text-transform: uppercase;
+}
+
+
+.gallery-img div:hover {
+ opacity: 0.85;
+ transition: all ease-in-out 100ms;
+
+}
+
+
+
+/* Pop up window of Image */
+.img-window{
+ width: 100vw;
+ height: 100vh;
+ background-color: rgba(0, 0, 0, 0.85);
+ position: fixed;
+ top:0;
+ left: 0;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 100;
+}
+
+.img-window img{
+ max-height: 80vh;
+ max-width: 80vw;
+}
+
+
+
+#index-gallery .img12{
+ grid-area: img12;
+ background-image: url("../photos/thumbs/img12.jpg");
+}
+
+#index-gallery .img13{
+ grid-area: img13;
+ background-image: url("../photos/thumbs/img13.jpg");
+}
+
+#index-gallery .img14{
+ grid-area: img14;
+ background-image: url("../photos/thumbs/img14.jpg");
+
+}
+
+
+
+
+
+
+@media (max-width: 919px){
+  .aboutme h1{
+    font-size: 35px;
+  }
+  #artist{
+    font-size: 35px;
+  }
+  #blessed h1{
+    font-size: 35px;
+  }
+  #introgallery h1{
+    font-size: 35px;
+  }
+  #index-gallery h2{
+    font-size: 30px;
+  }
+  #index-gallery .gallery-img{
+    width: 100%;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center;
+    cursor: pointer;
+  }
+  .gallery-img a{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+
+
+@media (max-width: 550px){
+
+  .aboutme h1{
+    font-size: 25px;
+  }
+  .aboutme p{
+    font-size: 15px;
+  }
+
+  #blessed h1{
+    font-size: 25px;
+  }
+  #blessed p {
+    font-size: 15px;
+  }
+
+  #artist{
+    font-size: 25px;
+  }
+  #artist p {
+    font-size: 15px;
+  }
+  .btn {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 30%;
+  }
+  .btn i{
+    line-height: 40px;
+    font-size: 20px;
+  }
+  #introgallery h1{
+    font-size: 25px;
+  }
+
+  #introgallery p{
+    font-size: 15px;
+  }
+
+  #index-gallery h2{
+    font-size: 25px;
+  }
+  #index-gallery p{
+    font-size: 15px;
+  }
+  #index-gallery .gallery-img{
+    width: 44vw;
+    height: 200px;
+  }
+
+  #index-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas:
+
+    "img9 img10"
+    "img11 img11"
+    "img12 img13"
+    "img14 img14"
+    ;
+
+  }
+  #index-gallery .img11{
+    width: 100%;
+  }
+  #index-gallery .img14{
+    width: 100%;
+  }
+
+  .gallery-img a{
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+}
