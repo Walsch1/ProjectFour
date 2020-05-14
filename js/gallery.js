@@ -1,6 +1,10 @@
 let galleryImages = document.querySelectorAll(".gallery-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
+let imgWidth;
+let calcImgToEdge;
+let nextBtn;
+let prevBtn;
 
 if (galleryImages){
   galleryImages.forEach(function(image, index){
@@ -85,15 +89,23 @@ function changeImg(changeDir){
   getLatestOpenedImg = calcNewImg;
 
   newImg.onload = function(){
-    let imgWidth = this.width;
-    let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 85;
+    imgWidth = this.width;
+    calcImgToEdge = ((windowWidth - imgWidth) / 2) - 85;
 
-    let nextBtn = document.querySelector(".img-btn-next");
+    nextBtn = document.querySelector(".img-btn-next");
     nextBtn.style.cssText = "right: " + calcImgToEdge + "px; ";
 
-    let prevBtn = document.querySelector(".img-btn-prev");
+    prevBtn = document.querySelector(".img-btn-prev");
     prevBtn.style.cssText = "left: " + calcImgToEdge + "px; ";
   }
 
 
 }
+
+window.addEventListener("resize", function(){
+  windowWidth = window.innerWidth;
+  imgWidth = document.querySelector("#current-img").width;
+  calcImgToEdge = ((windowWidth - imgWidth) / 2) - 85;
+  nextBtn.style.cssText = "right: " + calcImgToEdge + "px; ";
+  prevBtn.style.cssText = "left: " + calcImgToEdge + "px; ";
+});

@@ -93,12 +93,12 @@
 
 
 .aboutme{
-
   font-variant: small-caps;
   box-sizing: border-box;
   margin: 0 3vw 0 3vw;
   color: white;
   font-size: 25px;
+
 }
 
 .aboutme h1{
@@ -109,10 +109,17 @@
 }
 
 .aboutme p{
+  line-height: 25px;
   font-size: 18px;
   font-variant: normal;
+  text-indent: 30px;
 }
 
+.aboutme p, .aboutme h1{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 #artist{
   font-size: 45px;
@@ -137,10 +144,33 @@ text-align: center;
   grid-area: blessedh1;
 }
 
+#pay{
+  text-align: center;
+  font-size: 17px;
+  font-variant: normal;
+  padding-bottom: 35px;
+}
 
+#pay p{
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin:0;
+}
 
+#pay a{
+  padding:0;
+  margin:0;
 
+}
 
+#pay p, #pay a{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
@@ -303,6 +333,8 @@ text-align: center;
     font-size: 25px;
   }
   .aboutme p{
+    line-height: 19px;
+    text-indent: 12px;
     font-size: 15px;
   }
 
@@ -374,6 +406,13 @@ text-align: center;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+  }
+  #pay{
+    font-size: 16px;
+  }
+
+  #pay p{
+    font-size: 15px;
   }
 
 }
