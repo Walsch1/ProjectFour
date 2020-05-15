@@ -147,11 +147,17 @@ a.active,a:hover{
     left: 0;
   }
 }
+
+@media (max-width: 483px){
+  label.logo{
+  font-size: 25px;
+  line-height: 80px;
+
+  }
+}
 @media (max-width: 446px){
   nav{
     font-size: 20px;
-
-
   }
   label.logo{
   font-size: 25px;
@@ -169,3 +175,14 @@ a.active,a:hover{
 .wrapper-gallery{
   margin: 0 5vw 5vw 5vw;
 }
+
+@media (max-width: 377px){
+  label.logo{
+  font-size: 22px;
+  line-height: 80px;
+  margin-left: 30px;
+  margin-right: 3px;
+  padding:0;
+    }
+
+  }
